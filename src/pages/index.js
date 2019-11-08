@@ -8,13 +8,15 @@ import Style from "./index.module.scss"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
+  const AnimatedName = animated(Chelsea)
+
   const invertAnim = useSpring({
     from: { transform: "translate(-50%, -50%)" },
     to: { transform: "translate(-40%, -5%)" },
     config: config.stiff,
+    delay: 600,
   })
   const { percent } = useSpring({ to: { percent: 0 }, from: { percent: 1 } })
-  const AnimatedName = animated(Chelsea)
 
   return (
     <Layout>
