@@ -24,8 +24,8 @@ const IndexPage = () => {
   })
 
   const { percent } = useSpring({
-    to: { percent: 0 },
     from: { percent: 1 },
+    to: { percent: 0 },
   })
 
   return (
