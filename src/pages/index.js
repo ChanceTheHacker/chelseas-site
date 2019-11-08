@@ -13,16 +13,13 @@ const IndexPage = () => {
     to: { transform: "translate(-40%, -5%)" },
     config: config.stiff,
   })
-  const chelseaTextAnim = useSpring({ x: 100, from: { x: 90 } })
+  const { percent } = useSpring({ to: { percent: 1 }, from: { percent: 0 } })
 
   return (
     <Layout>
       <SEO title="Home" />
-      <div
-        className={Style.chelseaDiv}
-        clipPath={`inset(0% ${chelseaTextAnim.x}% 0% 0%)`}
-      >
-        <Chelsea percent={0} />
+      <div className={Style.chelseaDiv}>
+        <Chelsea percent={percent.interpolate(percent => percent)} />
       </div>
       <animated.div className={Style.invert} style={invertAnim}>
         {" "}
