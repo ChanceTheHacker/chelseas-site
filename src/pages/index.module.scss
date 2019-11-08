@@ -10,6 +10,7 @@
   padding: 10px;
   padding-top: 20px;
   position: absolute;
+  background: transparent;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -30,8 +31,27 @@
   position: absolute;
   background-color: transparent;
   transform: translate(-10%, -100%);
-  border-left: solid 1px black;
-  border-bottom: solid 1px black;
+  border-left: 1px solid $primary;
+  border-bottom: 1px solid $primary;
   height: 200%;
   width: 110%;
+  z-index: -1;
+}
+
+.outlineHideX {
+  position: absolute;
+  background-color: white;
+  transform: translate(calc(-10% + 2px), calc(-100% + 1px)) scaleX(1);
+  height: calc(200% + 2px);
+  width: 110%;
+  z-index: -1;
+}
+
+.outlineHideY {
+  position: absolute;
+  background-color: white;
+  transform: translate(calc(-10% - 1px), calc(-100% - 1px)) scaleY(1);
+  height: 200%;
+  width: calc(110% + 3px);
+  z-index: -1;
 }
