@@ -7,10 +7,8 @@ import Style from "./header.module.scss"
 const Header = ({ siteTitle }) => (
   <header className={Style.header}>
     <div>
-      <ChelseaIcon size="30" />
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+      {/* <ChelseaIcon size="30" /> */}
+      <h1>{/* <Link to="/">{siteTitle}</Link> */}</h1>
     </div>
   </header>
 )
