@@ -1,7 +1,9 @@
-// svg {
-//   color: red;
-//   fill: currentColor;
-// }
+@import '../style/index.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .chelseaDiv {
   width: 50%;
@@ -11,7 +13,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-// clip-path: inset(0% 20% 0% 0%);
+  // clip-path: inset(0% 20% 0% 0%);
 }
 
 .invert {
@@ -22,4 +24,14 @@
   width: 50%;
   height: 25%;
   backdrop-filter: invert(100%);
+}
+
+.outline {
+  position: absolute;
+  background-color: transparent;
+  transform: translate(-10%, -100%);
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  height: 200%;
+  width: 110%;
 }

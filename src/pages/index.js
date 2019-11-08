@@ -14,18 +14,32 @@ const IndexPage = () => {
     from: { transform: "translate(-50%, -50%)" },
     to: { transform: "translate(-40%, -5%)" },
     config: config.stiff,
+    delay: 1000,
+  })
+
+  const invertOpacityAnim = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
     delay: 600,
   })
-  const { percent } = useSpring({ to: { percent: 0 }, from: { percent: 1 } })
+
+  const { percent } = useSpring({
+    to: { percent: 0 },
+    from: { percent: 1 },
+  })
 
   return (
     <Layout>
       <SEO title="Home" />
       <div className={Style.chelseaDiv}>
         <AnimatedName percent={percent.interpolate(percent => percent)} />
+        <div className={Style.outline}> </div>
       </div>
-      <animated.div className={Style.invert} style={invertAnim}>
-        {" "}
+      <animated.div style={invertOpacityAnim}>
+        <animated.div
+          className={Style.invert}
+          style={invertAnim}
+        ></animated.div>
       </animated.div>
     </Layout>
   )
