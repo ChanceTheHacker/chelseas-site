@@ -1,9 +1,4 @@
-@import '../style/index.scss';
-
-* {
-  margin: 0;
-  padding: 0;
-}
+@import '../../style/index.scss';
 
 .chelseaDiv {
   width: 50%;
@@ -14,7 +9,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // clip-path: inset(0% 20% 0% 0%);
 }
 
 .invert {
