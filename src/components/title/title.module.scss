@@ -2,13 +2,15 @@
 
 .chelseaDiv {
   width: 50%;
-  padding: 10px;
-  padding-top: 20px;
-  position: absolute;
-  background: transparent;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 50%;
+  // padding: 10px;
+  // padding-top: 20px;
+  // position: absolute;
+  // background: transparent;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+
 }
 
 .invert {
@@ -24,11 +26,11 @@
 .outline {
   position: absolute;
   background-color: transparent;
-  transform: translate(-10%, -100%);
+  transform: translate(-10%, -180%);
   border-left: 1px solid $primary;
   border-bottom: 1px solid $primary;
-  height: 200%;
-  width: 110%;
+  height: 20%;
+  width: 50%;
   z-index: -1;
 }
 

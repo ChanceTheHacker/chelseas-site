@@ -1,0 +1,9 @@
+@import '../../style/index.scss';
+
+.contact {
+  @include flex-center;
+  margin: 0 auto;
+  width: 80vw;
+  height: 50vh;
+  background: green;
+}
