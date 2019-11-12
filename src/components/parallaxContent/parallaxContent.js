@@ -6,6 +6,12 @@ export const ParallaxContent = ({ children }) => {
   const parallaxRef = useRef()
   const [scrollMultiplier, setScrollMultiplier] = useState(0.5)
 
+  const style = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }
+
   //if the user scrolls using a mouse wheel, this makes the scroll faster
   const detectWheel = () => {
     setScrollMultiplier(1)
@@ -14,38 +20,14 @@ export const ParallaxContent = ({ children }) => {
   return (
     <div onWheel={detectWheel}>
       <Parallax ref={parallaxRef} pages={3}>
-        <ParallaxLayer
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          offset={0}
-          speed={0.5 * scrollMultiplier}
-        >
+        <ParallaxLayer style={style} offset={0} speed={0.5 * scrollMultiplier}>
           {Title}
         </ParallaxLayer>
-        <ParallaxLayer
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          offset={0}
-          speed={1.3 * scrollMultiplier}
-        >
+        <ParallaxLayer style={style} offset={0} speed={1.3 * scrollMultiplier}>
           {Invert}
         </ParallaxLayer>
 
-        <ParallaxLayer
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          offset={1}
-          speed={2 * scrollMultiplier}
-        >
+        <ParallaxLayer style={style} offset={0.99} speed={1 * scrollMultiplier}>
           {Contact}
         </ParallaxLayer>
       </Parallax>
